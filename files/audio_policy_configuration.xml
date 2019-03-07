@@ -93,10 +93,10 @@
 			<route type="mux" sink="BT SCO All" sources="primary,deep_buffer,compressed_offload,voip_rx,direct_pcm"/>
 			<route type="mux" sink="Telephony Tx" sources="voice_tx"/>
 			<!-- Input routes -->
-			<route type="mux" sink="primary input" sources="Built-In Mic,Wired Headset Mic,BT SCO Headset Mic,FM Tuner,Telephony Rx"/>
-			<route type="mux" sink="surround_sound" sources="Built-In Mic,Built-In Back Mic"/>
-			<route type="mux" sink="record_24" sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic"/>
-			<route type="mux" sink="voice_rx" sources="Telephony Rx"/>
+			<route type="mix" sink="primary input" sources="Built-In Mic,Wired Headset Mic,BT SCO Headset Mic,FM Tuner,Telephony Rx"/>
+			<route type="mix" sink="surround_sound" sources="Built-In Mic,Built-In Back Mic"/>
+			<route type="mix" sink="record_24" sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic"/>
+			<route type="mix" sink="voice_rx" sources="Telephony Rx"/>
 		</routes>
 	</module>
 	<xi:include href="a2dp_audio_policy_configuration.xml"/>
